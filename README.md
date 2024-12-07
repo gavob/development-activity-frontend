@@ -21,7 +21,7 @@ Type the name of a public repository and select 'View Activity' to see an analys
 Use the search bar again to find and select another repository to change the analysis
 
 The charts for releases, commits, comments, issues and pull requests simply display number of occurrences arranged by date. 
-These can be affected negatively by very active public repositories ineffectively because the 100 records fetched in the backend may
+These can be affected negatively by very active public repositories because the 100 records fetched in the backend may
 be reduced to just a few instances.
 
 The charts for active contributors and issue types display the most prevalant recent issue labels and the most active
