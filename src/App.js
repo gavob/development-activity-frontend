@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import RepoSearcher from './components/RepoSearcher';
+import DataVisualiser from './components/DataVisualiser';
+import { Container } from 'react-bootstrap';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [analysisIsLoading, setAnalysisIsLoading] = useState(false);
+    const [repoName, setRepoName] = useState("");
+
+    return (
+        <div className="App pb-4">
+            <header className='App-header p-4 mb-4'>
+                <h1>Development Activity Visualiser</h1>
+            </header>
+            <Container>
+                <RepoSearcher setAnalysisIsLoading={setAnalysisIsLoading} setRepoName={setRepoName}/>
+                <DataVisualiser isLoading={analysisIsLoading} setIsLoading={setAnalysisIsLoading} repoName={repoName}/>
+            </Container>
+        </div>
+    );
 }
 
 export default App;
