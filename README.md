@@ -29,3 +29,21 @@ recent contributors
 
 The charts for issue close times and pull request times shows the time in hours for the most recent pull requests to be merged and
 the times issues take to be closed
+
+## Improvements
+
+Customising the charts proved to be quite difficult, I've used some other chart libraries before which were a bit simpler, but
+the one I chose for this, Nivo, had some particularly nice looking charts. This features some in-depth options and controls 
+to customise the charts, the existing code styling the charts used here needs further work and refactoring to generally tidy
+up the code and things like styling tooltips on the charts needs a bit more work. Improving this really just requires learning the  
+Nivo chart tools a bit deeper.
+
+There is quite a long loading time after selecting a repository to see an analysis, improving this will largely come from 
+some optimisation in the backend system (Which I do discuss briefly in the improvements here https://github.com/gavob/developer-activity-service). 
+
+The analysis view itself could do with adjusted margins to line up elements a bit better and possibly some descriptions around some 
+of the charts explaining the data displayed.
+
+Further improvements to this could be combined data within charts, such as pull request and issue counts comparison. Deeper insights
+around certain topics, which might be something like a button around issue times which allow you to view that particular issue
+details in a modal view or drop down section within the analysis.
